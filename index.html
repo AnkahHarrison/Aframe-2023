@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./script/aframe.min.js"></script>
+    <script src="./script/ada-water.js"></script>
+    <title>Ankah Harrison End of Semester project</title>
+</head>
+<body>
+
+    <a-scene>
+<!-- sir please when i try add additonal model my some previous one get distorted -->
+        <a-assets>
+            <a-asets-items id="myhouse" src="./models/house/scene.gltf"></a-asets-items>
+            
+            <img src="./textures/2k_stars_milky_way.jpg" id="sky" alt="">
+            <img src="./textures/Harry.jpg" id="ground" alt="">
+           
+        <a-assets-items id="light" src="./models/light4/scene.gltf"></a-asets-items>         
+        </a-asets>      
+        <a-asset-item
+        id="helicopter"
+        src="./models/helicopter_v2/scene.gltf"
+
+      ></a-asset-item>
+
+      <a-asset-item
+          id="swimmingPool"
+          src="./models/swimming_pool (1)/scene.gltf"
+        ></a-asset-item> 
+
+     <a-entity gltf-model="./models/swimming_pool (1)/scene.gltf" position="-50 -5.0 -10" scale="1 1 1" rotation=""></a-entity>     
+
+      <!-- car -->
+       <a-asset-item
+      id="car"
+      src="./models/car/scene.gltf"
+    ></a-asset-item> 
+
+
+  <a-entity gltf-model="./models/helicopter_v2/scene.gltf" position="-39.49807 4.36366 -80.63276" scale="4 4 4" rotation=""></a-entity>
+
+  <!-- <a-entity gltf-model="./models/car/scene.gltf" position="-39.49807 4.36366 -80.63276" scale="2.5 2.5 2.5" rotation=""></a-entity> -->
+  <a-entity gltf-model="./models/car/scene.gltf" position="-18.72819 -1.18626 -84.17605" scale="2.5 2.5 2.5" rotation=""></a-entity>
+        <a-sky src="#sky" ></a-sky>
+
+        <a-plane color="" width="20" height="20" position="20 -1 0" rotation="-90 0 0" scale="25 25 25" src="#ground" repeat="16 16"></a-plane>
+        
+
+        <a-entity gltf-model="#myhouse" scale="2.5 2.5 2.5"></a-entity>
+              
+        <!-- <a-entity light="type: spot; color: #ff8d0a; angle: 80; penumbra: 0.29; intensity: 0.8; groundColor: #ffffff; shadowRadius: 1.01" rotation="-87.616 -174.381 -7.331000000000001" position="73.1316 6.50047 -30.59944"></a-entity> -->
+       
+
+          <a-entity position="53.16226 6.35054 -10.07289">
+            <a-entity gltf-model="./models/light4/scene.gltf" scale="0.7 0.7 0.7"></a-entity>
+            <a-entity light="type: point; color: #ffffff; intensity: 2; distance: 20;" position="0 -2 0"></a-entity>
+        </a-entity>
+
+          <a-entity position="30 5.9 -13">
+            <a-light type="spot" color="#fff" angle="45" intensity="1" distance="50" penumbra="0.5" rotation="-71.86265849648838 -2.4482486585940073 -70.41422119039765" light="color: #56b8f5; angle: 70; intensity: 1.9; penumbra: 0.51; castShadow: true"></a-light>
+          </a-entity>
+
+          <a-entity position="30 6 -13.1">
+            <a-entity light="type: point; intensity: 300; distance: 1.81; angle: 20; color: #fffff; castShadow: true" position="0 -1.11834 0" angle="10"></a-entity>
+            <a-entity gltf-model="./models/light4/scene.gltf" scale="0.7 0.7 0.7" position="0 0.2 0"></a-entity>
+          </a-entity>
+      
+
+  <a-entity gltf-model="./models/light4/scene.gltf" scale="0.7 0.7 0.7" position="77.4 9.9 -35"></a-entity>
+<a-entity position="77.4 9.9 -35">
+   <a-light type="spot" color="white" angle="45" intensity="1" distance="50" penumbra="0.5" 
+            rotation="-90 0 0" light="color: #56b8f5; angle: 70; intensity: 2.9; penumbra: 0.51; castShadow: true"></a-light>
+</a-entity>
+
+
+
+<a-entity position="78 5.9 -16">
+  <a-light type="spot" color="#fff" angle="-45" intensity="50" distance="50" penumbra="0.5" rotation="-71.86265849648838 -2.4482486585940073 -70.41422119039765" light="color: #56b8f5; angle: 70; intensity: 1.9; penumbra: 0.51; castShadow: true"></a-light>
+</a-entity>
+
+
+
+<a-entity position="78 5.9 -16">
+  <a-entity light="type:point; intensity: 100.29; distance: 1.81; angle: 70; color: white; castShadow: true" position="0 -1.11834 0" angle="70"></a-entity>
+  <a-cylinder color="black" position="0 0.2 0"  radius="0.5" depth="1"></a-cylinder>
+</a-entity>
+ 
+ <a-entity gltf-model="./models/light4/scene.gltf" scale="0.7 0.7 0.7" position="79.4 11.9 -69"></a-entity>
+<a-entity position="79.4 11.9 -69">
+   <a-light type="spot" color="white" angle="45" intensity="1" distance="50" penumbra="0.5" 
+            rotation="-90 0 0" light="color: #56b8f5; angle: 70; intensity: 2.9; penumbra: 0.51; castShadow: true"></a-light>
+</a-entity> 
+
+
+      <!-- <a-water opacity="10" side="double" width="16" length="50" height="50" base-color="#d4f1f9" foam-color="#d4f1f9" repeat="2" voronoi-points="1" rotation="90 0 0" position="-63.97921 0.14962 69.77822" material="shader: water; transparent: true; repeat: 100 1; map: [object Object]; basecolor: blue" water-helper="" geometry="" animation="property: scale; dur: 2000; loop: NaN; dir: alternate; easing: easeOutElastic" scale="1.77 0.86 1.33"> -->
+        
+<!-- water start -->
+        <a-water opacity="10" side="double" width="16" length="50" height="50" base-color="#d4f1f9" foam-color="#d4f1f9" repeat="2" voronoi-points="1" rotation="90 0 0" position="-52 -0.9 -9.3" material="shader: water; transparent: true; repeat: 100 1; map: [object Object]; basecolor: blue" water-helper="" geometry="" animation="property: scale; dur: 2000; loop: NaN; dir: alternate; easing: easeOutElastic" scale="1.7 0.79 1.33">
+        
+     <!-- water ends -->
+        </a-water>
+     
+      <!-- </a-water> -->
+<!-- js  -->
+    <script>
+      document.querySelector("a-water").setAttribute("animation", {
+        property: "scale",
+        // from: "10 2 1",
+        // to: "2 15 2",
+        dur: 2000,
+        loop: true,
+        dir: "alternate",
+        easing: "easeOutElastic",
+      });
+    </script>
+
+          <!-- camera positon -->
+        <a-camera position="50 5 20"></a-camera>
+        <!--Surrounding light -->
+        <a-entity light="type: ambient; color: white; intensity: 0.6;"></a-entity>
+        
+
+        
+    </a-scene>
+    
+</body>
+</html>
